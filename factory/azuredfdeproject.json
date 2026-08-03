@@ -1,0 +1,15 @@
+{
+	"name": "azuredfdeproject",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "australiaeast",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c1402446-6e72-4a56-93cc-d03fe2f5fc08",
+		"tenantId": "ae6586c2-a5c2-4fee-a561-7d96d57a9e7b"
+	}
+}
