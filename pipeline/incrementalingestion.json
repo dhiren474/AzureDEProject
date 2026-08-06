@@ -116,7 +116,7 @@
 								"type": "Expression"
 							},
 							"folder": {
-								"value": "@pipeline().parameters.cdc_folder",
+								"value": "@{pipeline().parameters.table}_cdc",
 								"type": "Expression"
 							},
 							"file": "cdc.json"
@@ -256,7 +256,7 @@
 											"type": "Expression"
 										},
 										"folder": {
-											"value": "@pipeline().parameters.cdc_folder",
+											"value": "@{pipeline().parameters.table}_cdc",
 											"type": "Expression"
 										},
 										"file": "empty.json"
@@ -273,7 +273,7 @@
 											"type": "Expression"
 										},
 										"folder": {
-											"value": "@pipeline().parameters.cdc_folder",
+											"value": "@{pipeline().parameters.table}_cdc",
 											"type": "Expression"
 										},
 										"file": "cdc.json"
