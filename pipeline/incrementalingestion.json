@@ -67,7 +67,10 @@
 						"referenceName": "Parquet_dynamic",
 						"type": "DatasetReference",
 						"parameters": {
-							"container": "bronze",
+							"container": {
+								"value": "@pipeline().parameters.container",
+								"type": "Expression"
+							},
 							"folder": {
 								"value": "@pipeline().parameters.table",
 								"type": "Expression"
@@ -108,8 +111,14 @@
 						"referenceName": "Dynamic_json",
 						"type": "DatasetReference",
 						"parameters": {
-							"container": "bronze",
-							"folder": "DimUser_cdc",
+							"container": {
+								"value": "@pipeline().parameters.container",
+								"type": "Expression"
+							},
+							"folder": {
+								"value": "@pipeline().parameters.cdc_folder",
+								"type": "Expression"
+							},
 							"file": "cdc.json"
 						}
 					},
@@ -242,8 +251,14 @@
 									"referenceName": "Dynamic_json",
 									"type": "DatasetReference",
 									"parameters": {
-										"container": "bronze",
-										"folder": "UserDim_cdc",
+										"container": {
+											"value": "@pipeline().parameters.container",
+											"type": "Expression"
+										},
+										"folder": {
+											"value": "@pipeline().parameters.cdc_folder",
+											"type": "Expression"
+										},
 										"file": "empty.json"
 									}
 								}
@@ -253,8 +268,14 @@
 									"referenceName": "Dynamic_json",
 									"type": "DatasetReference",
 									"parameters": {
-										"container": "bronze",
-										"folder": "UserDim_cdc",
+										"container": {
+											"value": "@pipeline().parameters.container",
+											"type": "Expression"
+										},
+										"folder": {
+											"value": "@pipeline().parameters.cdc_folder",
+											"type": "Expression"
+										},
 										"file": "cdc.json"
 									}
 								}
@@ -304,6 +325,12 @@
 				"type": "string"
 			},
 			"from_date": {
+				"type": "string"
+			},
+			"container": {
+				"type": "string"
+			},
+			"cdc_folder": {
 				"type": "string"
 			}
 		},
