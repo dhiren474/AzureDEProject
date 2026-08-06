@@ -329,9 +329,6 @@
 			},
 			"container": {
 				"type": "string"
-			},
-			"cdc_folder": {
-				"type": "string"
 			}
 		},
 		"variables": {
