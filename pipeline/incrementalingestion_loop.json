@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "ForEach1",
+				"name": "ForEachTable",
 				"type": "ForEach",
 				"dependsOn": [],
 				"userProperties": [],
@@ -327,6 +327,12 @@
 									}
 								]
 							}
+						},
+						{
+							"name": "If Condition1",
+							"type": "IfCondition",
+							"dependsOn": [],
+							"userProperties": []
 						}
 					]
 				}
